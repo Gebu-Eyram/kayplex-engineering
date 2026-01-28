@@ -93,9 +93,9 @@ export default function FieldPerformance() {
           <span className="font-normal text-gray-500">, Field 3</span>
         </p> */}
         <Image
-          src="/graph.png"
+          src="/graph.webp"
           alt="image"
-          className="mt-8 w-full object-cover min-w-96 shrink-0 "
+          className=" w-full object-cover h-120 min-w-96 shrink-0 "
           width={1200}
           height={600}
         />

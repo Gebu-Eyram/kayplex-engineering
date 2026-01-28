@@ -89,7 +89,7 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
           <p className="mt-2 max-w-xl text-3xl font-medium tracking-tighter md:text-balance text-gray-900 md:text-4xl">
             {title}
           </p>
-          <p className=" lg:text-lg">{description}</p>
+          <p className=" text-lg">{description}</p>
         </div>
         <ul
           role="list"

@@ -141,8 +141,8 @@ const Services = () => {
           ))}
         </CarouselContent>
         <div className="flex items-center justify-end gap-4 mb-4 md:absolute md:-top-16 md:right-0 md:mb-0">
-          <CarouselPrevious className="relative inset-0 h-10 w-10 rounded-2xl bg-black text-white! hover:bg-black/90" />
-          <CarouselNext className="relative inset-0 h-10 w-10 rounded-2xl bg-black text-white! hover:bg-black/90" />
+          <CarouselPrevious className="relative inset-0 h-10 w-10 rounded-2xl bg-orange-500 text-white! hover:bg-orange-600" />
+          <CarouselNext className="relative inset-0 h-10 w-10 rounded-2xl bg-orange-500 text-white! hover:bg-orange-600" />
         </div>
       </Carousel>
 
