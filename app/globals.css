@@ -123,3 +123,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .inter {
+    @apply font-[family:var(--font-inter)];
+  }
+}
