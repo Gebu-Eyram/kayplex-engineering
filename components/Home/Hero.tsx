@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { BlurFade } from "../ui/blur-fade";
 
 const Hero = () => {
   return (
-    <div className="relative h-screen  px-4 py-20 max-w-7xl mx-auto">
+    <div className="relative h-screen  px-4 py-20 ">
       <div
         className="absolute inset-0 "
         style={{
@@ -13,30 +14,36 @@ const Hero = () => {
           backgroundPosition: "center",
         }}
       ></div>
-      <div className="relative py-20 ">
+      <div className="relative py-20 max-w-7xl mx-auto ">
         <div className=" w-full h-full flex-col flex items-center justify-center ">
-          <h1 className="mt-2 text-center  text-4xl text-balance font-semibold tracking-tighter  text-gray-900 md:text-5xl">
-            Reliable Engineering Services Tailored for{" "}
-            <span className="text-rose-950">Diverse Industry Needs</span>
-          </h1>
-          <p className="mt-4  max-w-2xl text-center text-balance text-lg text-gray-700">
-            The trusted partner for comprehensive engineering solutions and
-            expertise across various sectors.
-          </p>
-          <div className="mt-8 flex justify-center gap-4">
-            <Link
-              href="/contact"
-              className="flex items-center justify-center rounded-full bg-rose-900 px-6 py-3  font-medium text-white hover:bg-rose-800"
-            >
-              Get a Quote
-            </Link>
-            <Link
-              href="/services"
-              className="flex items-center justify-center rounded-full border border-rose-900 px-6 py-3 text-lg font-medium text-rose-900 hover:bg-rose-50"
-            >
-              Our Services
-            </Link>
-          </div>
+          <BlurFade delay={0.2}>
+            <h1 className="mt-2 text-center  text-4xl text-balance font-semibold tracking-tighter  text-gray-900 md:text-5xl">
+              Reliable Engineering Services Tailored for{" "}
+              <span className="text-rose-950">Diverse Industry Needs</span>
+            </h1>
+          </BlurFade>
+          <BlurFade delay={0.4}>
+            <p className="mt-4  max-w-2xl text-center text-balance text-lg text-gray-700">
+              The trusted partner for comprehensive engineering solutions and
+              expertise across various sectors.
+            </p>
+          </BlurFade>
+          <BlurFade delay={0.6}>
+            <div className="mt-8 flex justify-center gap-4">
+              <Link
+                href="/contact"
+                className="flex items-center justify-center rounded-full bg-rose-900 px-6 py-3  font-medium text-white hover:bg-rose-800"
+              >
+                Get a Quote
+              </Link>
+              <Link
+                href="/services"
+                className="flex items-center justify-center rounded-full border border-rose-900 px-6 py-3 text-lg font-medium text-rose-900 hover:bg-rose-50"
+              >
+                Our Services
+              </Link>
+            </div>
+          </BlurFade>
         </div>
       </div>
 

@@ -8,10 +8,9 @@ import { useScroll } from "motion/react";
 import Image from "next/image";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "Home", href: "#link" },
+  { name: "About Us", href: "#link" },
+  { name: "Our Services", href: "#link" },
 ];
 
 export const HeroHeader = () => {
@@ -89,14 +88,9 @@ export const HeroHeader = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button asChild variant="outline" size="sm">
+                <Button asChild className="border-2 bg-rose-950 rounded-2xl">
                   <Link href="#">
-                    <span>Login</span>
-                  </Link>
-                </Button>
-                <Button asChild size="sm">
-                  <Link href="#">
-                    <span>Sign Up</span>
+                    <span>Contact Us</span>
                   </Link>
                 </Button>
               </div>

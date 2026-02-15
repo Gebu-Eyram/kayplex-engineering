@@ -9,8 +9,6 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <HeroHeader />
-
       <Hero />
       <Services />
       <Analysis />

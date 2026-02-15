@@ -7,9 +7,10 @@ export default function Analysis() {
     <section className="overflow-hidden py-16 md:py-32">
       <div className="mx-auto max-w-7xl space-y-8 px-6 md:space-y-12">
         <div className="relative z-10 max-w-2xl">
-          <p className="mt-2 max-w-xl text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
-            Advanced Analytics & Insights for Informed Decisions
-          </p>
+          <h2 className="mt-2 max-w-xl text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
+            Advanced Analytics & Insights for{" "}
+            <span className="text-rose-950">Informed Decisions</span>
+          </h2>
           <p className="mt-6 text-lg">
             We leverage cutting-edge analytics tools to provide you with deep
             insights into your projects, enabling data-driven decision-making
