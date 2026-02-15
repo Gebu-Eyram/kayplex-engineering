@@ -17,8 +17,8 @@ const Hero = () => {
       <div className="relative py-20 max-w-7xl mx-auto ">
         <div className=" w-full h-full flex-col flex items-center justify-center ">
           <BlurFade delay={0.2}>
-            <h1 className="mt-2 text-center  text-4xl text-balance font-semibold tracking-tighter  text-gray-900 md:text-5xl">
-              Reliable Engineering Services Tailored for{" "}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-balance text-center   font-medium tracking-tight text-gray-900">
+              Reliable Engineering Solutions for{" "}
               <span className="text-rose-950">Diverse Industry Needs</span>
             </h1>
           </BlurFade>

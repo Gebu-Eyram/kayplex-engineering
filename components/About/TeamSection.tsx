@@ -17,6 +17,7 @@ type Member = {
 const TeamMembers: Member[] = [
   {
     initials: "KD",
+    img: "/team/ceo.webp",
     name: "Ing. Kwaku Duah",
     role: "Chief Executive Officer",
     description: "Strategic leadership and company vision",
@@ -27,6 +28,7 @@ const TeamMembers: Member[] = [
   {
     initials: "SA",
     name: "Dr. Stephen Adjei",
+    img: "/team/eng-dir.webp",
     role: "Engineering Director",
     description: "Driving innovative engineering solutions",
     skill: "Technical Leadership",
@@ -55,25 +57,25 @@ const TeamMembers: Member[] = [
 
 const TeamSection: React.FC = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12">
+    <section className="max-w-7xl mx-auto px-4 ">
       <div className="md:flex md:items-center md:justify-between mb-6 gap-6">
-        <div className="max-w-2xl">
-          <p className="text-sm text-muted-foreground font-medium">Our Team</p>
-          <h2 className="mt-2 font-sans text-3xl md:text-4xl font-semibold">
-            Meet the Minds Behind Kayplex
+        <div className="">
+          <p className="text-sm text-rose-950 font-medium mb-8">OUR TEAM</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-balance  font-medium tracking-tight text-gray-900">
+            The Minds Behind{" "}
+            <span className="bg-rose-950 text-white px-1">Kayplex</span>
           </h2>
-          <p className="mt-3 md:text-lg text-muted-foreground">
-            Expert engineers and industry veterans delivering top-tier oilfield
-            services with innovation and precision.
+          <p className="mt-3 md:text-lg max-w-3xl text-balance text-muted-foreground">
+            Our team comprises expert engineers and seasoned industry veterans
+            with decades of combined experience in delivering top-tier oilfield
+            services.
           </p>
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {TeamMembers.map((member) => {
-          const avatar =
-            member.img ??
-            `https://i.pravatar.cc/400?u=${encodeURIComponent(member.initials)}`;
+          const avatar = member.img ?? `/team/placeholder.jpg`;
           const firstName = member.name.split(" ")[0];
           return (
             <article
