@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
@@ -8,23 +9,14 @@ import { useScroll } from "motion/react";
 import Image from "next/image";
 
 const menuItems = [
-  { name: "Home", href: "#link" },
-  { name: "About Us", href: "#link" },
-  { name: "Our Services", href: "#link" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Our Services", href: "/services" },
 ];
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
-  const [scrolled, setScrolled] = React.useState(false);
-
-  const { scrollYProgress } = useScroll();
-
-  React.useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (latest) => {
-      setScrolled(latest > 0.05);
-    });
-    return () => unsubscribe();
-  }, [scrollYProgress]);
+  const pathname = usePathname();
 
   return (
     <header>
@@ -34,68 +26,78 @@ export const HeroHeader = () => {
       >
         <div className="mx-auto max-w-7xl px-6 transition-all duration-300">
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
-            <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
-              <Link
-                href="/"
-                aria-label="home"
-                className="flex items-center space-x-2"
-              >
-                <Image src="/logo.svg" alt="Logo" width={40} height={40} />
-                <div className="text-xs uppercase">
-                  <p className="text-sm font-semibold">Kayplex</p>
-                  <p>Engineering Services</p>
-                </div>
-              </Link>
-
-              <button
-                onClick={() => setMenuState(!menuState)}
-                aria-label={menuState == true ? "Close Menu" : "Open Menu"}
-                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
-              >
-                <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
-              </button>
-
-              <div className="hidden lg:block">
-                <ul className="flex gap-8 text-sm">
-                  {menuItems.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
-                      >
-                        <span>{item.name}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+            <Link
+              href="/"
+              aria-label="home"
+              className="flex items-center space-x-2"
+            >
+              <Image src="/logo.svg" alt="Logo" width={40} height={40} />
+              <div className="text-xs uppercase">
+                <p className="text-sm font-semibold">Kayplex</p>
+                <p>Engineering Services</p>
               </div>
+            </Link>
+
+            <div className="hidden lg:flex items-center gap-6">
+              {menuItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`text-sm font-medium hover:text-rose-900 transition-colors ${
+                    pathname === item.href ? "text-rose-900" : ""
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
 
-            <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
-              <div className="lg:hidden">
-                <ul className="space-y-6 text-base">
-                  {menuItems.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
-                      >
-                        <span>{item.name}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button asChild className="border-2 bg-rose-950 rounded-2xl">
-                  <Link href="#">
-                    <span>Contact Us</span>
-                  </Link>
-                </Button>
-              </div>
-            </div>
+            <Link
+              href="/contact"
+              className={`hidden lg:block text-sm font-medium hover:text-rose-900 transition-colors ${
+                pathname === "/contact" ? "text-rose-900" : ""
+              }`}
+            >
+              Contact Us
+            </Link>
+
+            <button
+              onClick={() => setMenuState(!menuState)}
+              aria-label={menuState == true ? "Close Menu" : "Open Menu"}
+              className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
+            >
+              <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
+              <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
+            </button>
           </div>
+
+          {menuState && (
+            <div className="lg:hidden absolute top-full left-0 w-full bg-white border-b shadow-md">
+              <div className="flex flex-col items-center gap-4 py-4">
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`text-sm font-medium hover:text-orange-600 transition-colors ${
+                      pathname === item.href ? "text-orange-600" : ""
+                    }`}
+                    onClick={() => setMenuState(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/contact"
+                  className={`text-sm font-medium hover:text-orange-600 transition-colors ${
+                    pathname === "/contact" ? "text-orange-600" : ""
+                  }`}
+                  onClick={() => setMenuState(false)}
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
     </header>

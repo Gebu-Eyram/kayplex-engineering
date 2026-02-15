@@ -29,6 +29,23 @@ const Services = () => {
   const cardData = [
     {
       badge: { text: "New", variant: "orange" as const },
+      image: "/services/mining.jpg",
+      href: "/",
+      title: "Mining Engineering Consultancy",
+      subtitle:
+        "Comprehensive consultancy for mining operations, resource extraction, and environmental management.",
+      description:
+        "Our mining engineering consultancy services provide expert guidance in all aspects of mining operations, from exploration and planning to extraction and rehabilitation. We focus on sustainable practices, safety, and efficiency to maximize resource recovery while minimizing environmental impact.",
+      advantages: [
+        "Geological assessment and resource evaluation",
+        "Sustainable mining practices and environmental compliance",
+        "Safety management and risk mitigation",
+        "Operational optimization and cost reduction",
+      ],
+    },
+
+    {
+      badge: { text: "New", variant: "orange" as const },
       image: "/services/road.jpeg",
       href: "/",
       title: "Road Construction Engineering",
@@ -57,6 +74,22 @@ const Services = () => {
         "Process technology consulting",
         "Yield enhancement and defect reduction",
         "Compliance with industry standards and regulations",
+      ],
+    },
+    {
+      badge: { text: "New", variant: "orange" as const },
+      image: "/services/building.jpg",
+      href: "/",
+      title: "Building and Construction Engineering",
+      subtitle:
+        "Comprehensive engineering services for residential, commercial, and industrial construction projects.",
+      description:
+        "Our building and construction engineering services encompass the entire project lifecycle, from conceptual design and structural analysis to construction management and quality assurance. We deliver innovative, sustainable, and cost-effective solutions that meet the highest standards of safety and performance.",
+      advantages: [
+        "Structural design and analysis",
+        "Project management and coordination",
+        "Sustainable building practices",
+        "Quality control and compliance",
       ],
     },
     {
@@ -123,22 +156,6 @@ const Services = () => {
         "Environmental compliance and sustainable practices",
       ],
     },
-    {
-      badge: { text: "New", variant: "orange" as const },
-      image: "/services/mining.jpg",
-      href: "/",
-      title: "Mining Engineering Consultancy",
-      subtitle:
-        "Comprehensive consultancy for mining operations, resource extraction, and environmental management.",
-      description:
-        "Our mining engineering consultancy services provide expert guidance in all aspects of mining operations, from exploration and planning to extraction and rehabilitation. We focus on sustainable practices, safety, and efficiency to maximize resource recovery while minimizing environmental impact.",
-      advantages: [
-        "Geological assessment and resource evaluation",
-        "Sustainable mining practices and environmental compliance",
-        "Safety management and risk mitigation",
-        "Operational optimization and cost reduction",
-      ],
-    },
   ];
   return (
     <div className="p-4 max-w-7xl mx-auto md:py-8 lg:mt-12">
@@ -195,9 +212,9 @@ const Services = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="flex items-center justify-end gap-4 mb-4 md:absolute md:-top-16 md:right-0 md:mb-0">
-            <CarouselPrevious className="relative inset-0 h-10 w-10 rounded-2xl bg-orange-500 text-white! hover:bg-orange-600" />
-            <CarouselNext className="relative inset-0 h-10 w-10 rounded-2xl bg-orange-500 text-white! hover:bg-orange-600" />
+          <div className="flex items-center justify-end gap-4 mt-8 md:mb-4 md:absolute md:-top-16 md:right-0 ">
+            <CarouselPrevious className="relative inset-0 h-10 w-10 rounded-2xl bg-rose-950 text-white! hover:bg-rose-950" />
+            <CarouselNext className="relative inset-0 h-10 w-10 rounded-2xl bg-rose-950 text-white! hover:bg-rose-950" />
           </div>
         </Carousel>
       </BlurFade>
