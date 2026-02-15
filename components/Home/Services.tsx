@@ -161,10 +161,10 @@ const Services = () => {
     <div className="p-4 max-w-7xl mx-auto md:py-8 lg:mt-12">
       <BlurFade delay={0.2}>
         <div className="flex items-end justify-between mb-10">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-balance    font-medium tracking-tight text-gray-900">
+          <p className="mt-2 max-w-xl text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
             Our Premium Services for Your Success in{" "}
             <span className="text-rose-950">Engineering Operations</span>
-          </h2>
+          </p>
         </div>
       </BlurFade>
 
