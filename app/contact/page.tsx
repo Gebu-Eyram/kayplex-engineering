@@ -108,7 +108,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="w-full py-12 md:py-20 px-4 bg-white">
+    <div className="w-full  md:py-40 px-4 py-20 m bg-white">
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Header Section */}
         <BlurFade delay={0.2}>
@@ -157,10 +157,10 @@ const ContactPage = () => {
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
                     <a
-                      href="mailto:kwaku.duah@kayplexengineering.com"
+                      href="mailto:info@kayplexengineering.com"
                       className="text-sm text-gray-600 hover:text-rose-950 hover:underline"
                     >
-                      kwaku.duah@kayplexengineering.com
+                      info@kayplexengineering.com
                     </a>
                   </div>
                 </div>
