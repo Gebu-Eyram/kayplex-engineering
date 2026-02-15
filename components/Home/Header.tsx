@@ -72,14 +72,14 @@ export const HeroHeader = () => {
           </div>
 
           {menuState && (
-            <div className="lg:hidden absolute top-full left-0 w-full bg-white border-b shadow-md">
-              <div className="flex flex-col items-center gap-4 py-4">
+            <div className="lg:hidden fixed top-0 left-0 w-full h-screen bg-white z-10 pt-20">
+              <div className="flex flex-col items-center gap-6 py-8">
                 {menuItems.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`text-sm font-medium hover:text-orange-600 transition-colors ${
-                      pathname === item.href ? "text-orange-600" : ""
+                    className={`text-lg font-medium hover:text-rose-900 transition-colors ${
+                      pathname === item.href ? "text-rose-900" : ""
                     }`}
                     onClick={() => setMenuState(false)}
                   >
@@ -88,8 +88,8 @@ export const HeroHeader = () => {
                 ))}
                 <Link
                   href="/contact"
-                  className={`text-sm font-medium hover:text-orange-600 transition-colors ${
-                    pathname === "/contact" ? "text-orange-600" : ""
+                  className={`text-lg font-medium hover:text-rose-900 transition-colors ${
+                    pathname === "/contact" ? "text-rose-900" : ""
                   }`}
                   onClick={() => setMenuState(false)}
                 >

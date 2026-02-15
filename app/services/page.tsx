@@ -74,7 +74,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white py-20 md:py-30 px-4">
+    <div className="min-h-screen bg-white py-28 md:py-30 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <BlurFade delay={0.2}>
