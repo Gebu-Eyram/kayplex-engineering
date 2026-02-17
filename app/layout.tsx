@@ -21,12 +21,14 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const BASE_URL = "https://www.kayplexengineering.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
     absolute:
       "Kayplex Engineering | Top Engineering Services in Ghana, Suriname & Beyond",
-    default:
-      "%s | Kayplex Engineering | Top Engineering Services in Ghana, Suriname & Beyond",
+    template: "%s | Kayplex Engineering",
   },
   keywords: [
     "Kayplex Engineering",
@@ -48,8 +50,34 @@ export const metadata: Metadata = {
   ],
   description:
     "Kayplex Engineering LTD. offers expert engineering services & consultancy in Ghana, Suriname, Guyana & Saudi Arabia. We optimize operations, efficiency & innovation.",
+  alternates: {
+    canonical: BASE_URL,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: BASE_URL,
+    siteName: "Kayplex Engineering",
+    title:
+      "Kayplex Engineering | Top Engineering Services in Ghana, Suriname & Beyond",
+    description:
+      "Kayplex Engineering LTD. offers expert engineering services & consultancy in Ghana, Suriname, Guyana & Saudi Arabia. We optimize operations, efficiency & innovation.",
+  },
   twitter: {
     card: "summary_large_image",
+    site: "@kayplexeng",
+    title:
+      "Kayplex Engineering | Top Engineering Services in Ghana, Suriname & Beyond",
+    description:
+      "Kayplex Engineering LTD. offers expert engineering services & consultancy in Ghana, Suriname, Guyana & Saudi Arabia. We optimize operations, efficiency & innovation.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
