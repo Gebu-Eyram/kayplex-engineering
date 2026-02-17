@@ -24,17 +24,17 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Kayplex Engineering | Top Oilfield Services in Ghana, Suriname & Beyond",
+      "Kayplex Engineering | Top Engineering Services in Ghana, Suriname & Beyond",
     default:
-      "%s | Kayplex Engineering | Top Oilfield Services in Ghana, Suriname & Beyond",
+      "%s | Kayplex Engineering | Top Engineering Services in Ghana, Suriname & Beyond",
   },
   keywords: [
     "Kayplex Engineering",
-    "Oilfield Services",
-    "Oilfield Services in Ghana",
-    "Oilfield Services in Suriname",
-    "Oilfield Services in Guyana",
-    "Oilfield Services in Saudi Arabia",
+    "Engineering Services",
+    "Engineering Services in Ghana",
+    "Engineering Services in Suriname",
+    "Engineering Services in Guyana",
+    "Engineering Services in Saudi Arabia",
     "Ghana",
     "Suriname",
     "Guyana",
@@ -42,12 +42,12 @@ export const metadata: Metadata = {
     "Engineering Consultancy",
     "Oil and Gas",
     "Energy Sector",
-    "Oilfield Optimization",
-    "Oilfield Efficiency",
-    "Innovation in Oilfield Services",
+    "Engineering Optimization",
+    "Engineering Efficiency",
+    "Innovation in Engineering Services",
   ],
   description:
-    "Kayplex Engineering offers expert oilfield services & consultancy in Ghana, Suriname, Guyana & Saudi Arabia. We optimize operations, efficiency & innovation.",
+    "Kayplex Engineering LTD. offers expert engineering services & consultancy in Ghana, Suriname, Guyana & Saudi Arabia. We optimize operations, efficiency & innovation.",
   twitter: {
     card: "summary_large_image",
   },

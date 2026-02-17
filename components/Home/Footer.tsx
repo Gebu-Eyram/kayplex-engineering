@@ -82,7 +82,7 @@ export default function Footer() {
               <Image src="/logo.svg" alt="Logo" width={40} height={40} />
               <div className="text-xs uppercase">
                 <p className="text-sm font-semibold">Kayplex</p>
-                <p>Engineering Services</p>
+                <p>Engineering LTD.</p>
               </div>
             </Link>
 
